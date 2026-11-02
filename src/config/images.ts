@@ -22,6 +22,7 @@ import tablePartage from "@/assets/images/table-partage.webp";
 import tablePartageLarge from "@/assets/images/table-partage-large.webp";
 import dinerRomantique from "@/assets/images/diner-romantique.webp";
 import ambianceBougies from "@/assets/images/ambiance-bougies.webp";
+import entree from "@/assets/images/entree-mamia-lagoon.webp";
 
 export type SiteImage = {
   src: StaticImageData;
@@ -38,7 +39,12 @@ const demo = (src: StaticImageData, alt: string): SiteImage => ({
 
 export const images = {
   hero: demo(heroLagune, "la lagune au coucher du soleil, encadrée de palmiers"),
-  about: demo(terrasseSoir, "une terrasse éclairée de guirlandes lumineuses à la tombée de la nuit"),
+  /** Photo réelle fournie par le restaurant. */
+  about: {
+    src: entree,
+    alt: "L’entrée de Mamia Lagoon à Grand-Bassam : l’enseigne au logo du soleil couchant sur la lagune, encadrée de palmiers, et les paillotes du restaurant derrière le portail",
+    demo: false,
+  } satisfies SiteImage,
   aboutDetail: demo(jardin, "un feuillage tropical dense et verdoyant"),
 
   cuisineIvoirienne: demo(assietteIvoirienne, "une assiette de poisson braisé accompagné d’attiéké et d’alloco"),

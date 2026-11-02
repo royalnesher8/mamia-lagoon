@@ -34,8 +34,8 @@ export function About() {
               alt={images.about.alt}
               fill
               placeholder="blur"
-              sizes="(min-width: 1024px) 40vw, 86vw"
-              className="object-cover transition-transform duration-[2500ms] ease-luxe hover:scale-105"
+              sizes="(min-width: 1024px) 34vw, 86vw"
+              className="object-cover object-top transition-transform duration-[2500ms] ease-luxe hover:scale-105"
             />
             <DemoBadge show={images.about.demo} className="top-3 left-3" />
           </ImageReveal>
@@ -48,6 +48,7 @@ export function About() {
               sizes="(min-width: 1024px) 20vw, 46vw"
               className="object-cover"
             />
+            <DemoBadge show={images.aboutDetail.demo} className="bottom-2 left-2 hidden sm:block" />
           </ImageReveal>
           <span aria-hidden="true" className="absolute -top-10 right-[4%] hidden font-serif text-[9rem] leading-none text-champagne/25 select-none sm:block">01</span>
         </div>

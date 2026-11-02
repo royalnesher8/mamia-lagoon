@@ -42,6 +42,13 @@ export function Footer() {
               <p>
                 <a href={links.tel} className="inline-flex items-center gap-2 hover:text-ivory">
                   <Phone className="size-4 text-champagne" aria-hidden="true" /> {restaurant.contact.phoneDisplay}
+                  <span className="text-ivory/50">· Restaurant</span>
+                </a>
+              </p>
+              <p>
+                <a href={links.telBar} className="inline-flex items-center gap-2 hover:text-ivory">
+                  <Phone className="size-4 text-champagne" aria-hidden="true" /> {restaurant.contact.barPhoneDisplay}
+                  <span className="text-ivory/50">· Bar</span>
                 </a>
               </p>
               <p>
