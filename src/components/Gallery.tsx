@@ -120,7 +120,7 @@ export function Gallery() {
         {videos.length > 0 && (
           <div className="mt-20 grid items-center gap-10 border-t border-lagoon/15 pt-16 md:grid-cols-2 lg:mt-28 lg:pt-20">
             <div className="max-w-md">
-              <p className="eyebrow text-champagne-ink">En vidéo</p>
+              <p className="eyebrow text-sun-ink">En vidéo</p>
               <h3 className="title-display mt-5 text-4xl text-lagoon sm:text-5xl">Mamia Lagoon en mouvement</h3>
               <p className="mt-5 leading-relaxed text-charcoal/75">
                 L’ambiance du lieu, partagée par l’équipe sur notre compte TikTok officiel.
@@ -180,7 +180,7 @@ export function Gallery() {
                 <ChevronLeft className="size-5" aria-hidden="true" />
               </button>
               <p id="lightbox-caption" className="text-center text-sm text-ivory/80" aria-live="polite">
-                <span className="mr-3 font-serif text-lg text-champagne">
+                <span className="mr-3 font-serif text-lg text-sun">
                   {index + 1} / {items.length}
                 </span>
                 {current.alt}

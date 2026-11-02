@@ -18,11 +18,11 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo size={104} />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-ivory/65">{restaurant.shortDescription}</p>
-            <p className="mt-6 font-serif text-xl text-champagne italic">{restaurant.tagline}</p>
+            <p className="mt-6 font-serif text-xl text-sun italic">{restaurant.tagline}</p>
           </div>
 
           <nav aria-label="Navigation du pied de page" className="lg:col-span-2 lg:col-start-6">
-            <h2 className="text-[0.7rem] font-semibold tracking-[0.25em] text-champagne uppercase">Explorer</h2>
+            <h2 className="text-[0.7rem] font-semibold tracking-[0.25em] text-sun uppercase">Explorer</h2>
             <ul className="mt-5 space-y-3 text-sm">
               {navigation.map((n) => (
                 <li key={n.href}>
@@ -36,24 +36,24 @@ export function Footer() {
           </nav>
 
           <div className="lg:col-span-3">
-            <h2 className="text-[0.7rem] font-semibold tracking-[0.25em] text-champagne uppercase">Contact</h2>
+            <h2 className="text-[0.7rem] font-semibold tracking-[0.25em] text-sun uppercase">Contact</h2>
             <address className="mt-5 space-y-3 text-sm not-italic text-ivory/75">
               <p>{restaurant.address.street ? `${restaurant.address.street}, ` : ""}{restaurant.address.locality}, {restaurant.address.country}</p>
               <p>
                 <a href={links.tel} className="inline-flex items-center gap-2 hover:text-ivory">
-                  <Phone className="size-4 text-champagne" aria-hidden="true" /> {restaurant.contact.phoneDisplay}
+                  <Phone className="size-4 text-sun" aria-hidden="true" /> {restaurant.contact.phoneDisplay}
                   <span className="text-ivory/50">· Restaurant</span>
                 </a>
               </p>
               <p>
                 <a href={links.telBar} className="inline-flex items-center gap-2 hover:text-ivory">
-                  <Phone className="size-4 text-champagne" aria-hidden="true" /> {restaurant.contact.barPhoneDisplay}
+                  <Phone className="size-4 text-sun" aria-hidden="true" /> {restaurant.contact.barPhoneDisplay}
                   <span className="text-ivory/50">· Bar</span>
                 </a>
               </p>
               <p>
                 <a href={links.whatsapp()} target="_blank" rel="noopener" className="inline-flex items-center gap-2 hover:text-ivory">
-                  <MessageCircle className="size-4 text-champagne" aria-hidden="true" /> WhatsApp
+                  <MessageCircle className="size-4 text-sun" aria-hidden="true" /> WhatsApp
                 </a>
               </p>
               {restaurant.contact.email && (
@@ -63,7 +63,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h2 className="text-[0.7rem] font-semibold tracking-[0.25em] text-champagne uppercase">Horaires</h2>
+            <h2 className="text-[0.7rem] font-semibold tracking-[0.25em] text-sun uppercase">Horaires</h2>
             {restaurant.openingHours ? (
               <ul className="mt-5 space-y-2 text-sm text-ivory/75">
                 {restaurant.openingHours.map((h) => (
@@ -75,7 +75,7 @@ export function Footer() {
             )}
             {restaurant.socials.length > 0 && (
               <>
-                <h2 className="mt-10 text-[0.7rem] font-semibold tracking-[0.25em] text-champagne uppercase">Suivez-nous</h2>
+                <h2 className="mt-10 text-[0.7rem] font-semibold tracking-[0.25em] text-sun uppercase">Suivez-nous</h2>
                 <ul className="mt-5 flex flex-wrap gap-4 text-sm">
                   {restaurant.socials.map((s) => (
                     <li key={s.href}>

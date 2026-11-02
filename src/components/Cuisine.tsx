@@ -110,9 +110,9 @@ export function Cuisine() {
           >
             <X className="size-5" aria-hidden="true" />
           </button>
-          <p className="eyebrow text-champagne-ink">Carte provisoire</p>
+          <p className="eyebrow text-sun-ink">Carte provisoire</p>
           <h2 id="menu-title" className="title-display mt-4 text-4xl text-lagoon sm:text-5xl">La carte</h2>
-          <p className="mt-5 rounded-sm border border-champagne/50 bg-champagne/10 p-4 text-sm leading-relaxed text-charcoal/80">
+          <p className="mt-5 rounded-sm border border-sun/50 bg-sun/10 p-4 text-sm leading-relaxed text-charcoal/80">
             La carte officielle de Mamia Lagoon sera bientôt disponible ici. Les rubriques ci-dessous sont indicatives :
             aucun plat ni prix n’est affiché tant qu’ils n’ont pas été confirmés par le restaurant.
           </p>
@@ -124,8 +124,8 @@ export function Cuisine() {
               </li>
             ))}
           </ul>
-          <div className="mt-8 border-l-2 border-champagne pl-5">
-            <p className="text-xs font-semibold tracking-[0.2em] text-champagne-ink uppercase">Piste éditoriale · à valider</p>
+          <div className="mt-8 border-l-2 border-sun pl-5">
+            <p className="text-xs font-semibold tracking-[0.2em] text-sun-ink uppercase">Piste éditoriale · à valider</p>
             <p className="mt-2 font-serif text-xl text-lagoon">La marmite du pêcheur</p>
             <p className="mt-1 text-sm leading-relaxed text-charcoal/70">
               Évoquée dans des avis publics de clients. À confirmer par le restaurant avant toute mise en avant.

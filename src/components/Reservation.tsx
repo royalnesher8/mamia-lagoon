@@ -60,14 +60,14 @@ export function Reservation() {
       </p>
     ) : null;
 
-  const label = "block text-[0.7rem] font-semibold tracking-[0.2em] text-champagne uppercase";
+  const label = "block text-[0.7rem] font-semibold tracking-[0.2em] text-sun uppercase";
 
   return (
     <section id="reservation" aria-labelledby="reservation-title" className="relative overflow-hidden bg-lagoon-deep py-24 text-ivory sm:py-32 lg:py-40">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-champagne/50 to-transparent" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sun/50 to-transparent" />
       <div className="mx-auto grid max-w-[1440px] gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-10 lg:px-12">
         <Reveal className="lg:col-span-5">
-          <p className="eyebrow text-champagne">Réservation</p>
+          <p className="eyebrow text-sun">Réservation</p>
           <h2 id="reservation-title" className="title-display mt-6 text-5xl text-balance sm:text-6xl lg:text-[4.5rem]">
             Votre table vous attend
           </h2>
@@ -75,8 +75,8 @@ export function Reservation() {
             Offrez-vous un moment gourmand dans le cadre enchanteur de Mamia Lagoon.
           </p>
 
-          <div className="mt-10 flex gap-4 border border-champagne/30 bg-ivory/5 p-5">
-            <Info className="mt-0.5 size-5 shrink-0 text-champagne" aria-hidden="true" />
+          <div className="mt-10 flex gap-4 border border-sun/30 bg-ivory/5 p-5">
+            <Info className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden="true" />
             <p className="text-sm leading-relaxed text-ivory/80">
               Votre demande est transmise au restaurant via WhatsApp.{" "}
               <strong className="font-semibold text-ivory">
@@ -87,8 +87,8 @@ export function Reservation() {
 
           <div className="mt-10">
             <p className="text-sm text-ivory/60">Vous préférez nous parler ?</p>
-            <a href={links.tel} className="group mt-2 inline-flex items-center gap-3 font-serif text-3xl text-ivory transition-colors hover:text-champagne-light">
-              <Phone className="size-5 text-champagne" aria-hidden="true" />
+            <a href={links.tel} className="group mt-2 inline-flex items-center gap-3 font-serif text-3xl text-ivory transition-colors hover:text-sun-light">
+              <Phone className="size-5 text-sun" aria-hidden="true" />
               {restaurant.contact.phoneDisplay}
             </a>
           </div>
@@ -102,10 +102,10 @@ export function Reservation() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="border border-champagne/40 bg-ivory/5 p-8 sm:p-12"
+                className="border border-sun/40 bg-ivory/5 p-8 sm:p-12"
                 role="status"
               >
-                <CheckCircle2 className="size-10 text-champagne" strokeWidth={1.25} aria-hidden="true" />
+                <CheckCircle2 className="size-10 text-sun" strokeWidth={1.25} aria-hidden="true" />
                 <h3 className="mt-6 font-serif text-4xl">Votre demande est prête</h3>
                 <p className="mt-4 leading-relaxed text-ivory/80">
                   WhatsApp s’est ouvert avec votre message prérempli : il ne vous reste qu’à l’envoyer. Votre table sera

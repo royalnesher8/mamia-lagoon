@@ -29,7 +29,7 @@ export function Hero() {
 
       <div className="mx-auto w-full max-w-[1440px] px-5 pt-40 pb-24 sm:px-8 lg:px-12 lg:pb-32">
         <motion.p
-          className="eyebrow text-champagne"
+          className="eyebrow text-sun"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease }}
@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 1.4, delay: 0.35, ease }}
           >
             MAMIA
-            <span className="block text-[0.5em] tracking-[0.42em] text-champagne-light sm:inline sm:pl-[0.3em] sm:text-[0.42em]">LAGOON</span>
+            <span className="block text-[0.5em] tracking-[0.42em] text-sun-light sm:inline sm:pl-[0.3em] sm:text-[0.42em]">LAGOON</span>
           </motion.span>
           <motion.span
             className="mt-6 block font-serif text-[clamp(1.6rem,4.2vw,3rem)] leading-tight font-normal italic"
@@ -83,7 +83,7 @@ export function Hero() {
       >
         Défiler
         <span className="relative block h-12 w-px overflow-hidden bg-ivory/20">
-          <span className="absolute inset-0 animate-scroll-cue bg-champagne" />
+          <span className="absolute inset-0 animate-scroll-cue bg-sun" />
         </span>
       </a>
     </section>

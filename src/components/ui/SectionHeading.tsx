@@ -13,7 +13,7 @@ export function SectionHeading({ eyebrow, title, intro, tone = "dark", align = "
   const centered = align === "center";
   return (
     <Reveal className={centered ? "mx-auto max-w-3xl text-center" : "max-w-2xl"}>
-      <p className={`eyebrow ${tone === "dark" ? "text-champagne-ink" : "text-champagne"} ${centered ? "justify-center" : ""}`}>
+      <p className={`eyebrow ${tone === "dark" ? "text-sun-ink" : "text-sun"} ${centered ? "justify-center" : ""}`}>
         {eyebrow}
       </p>
       <h2
