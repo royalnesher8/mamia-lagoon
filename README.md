@@ -39,7 +39,7 @@ npm start          # sert le build
 - [ ] **Adresse précise** et coordonnées GPS (`address.street`, `address.geo`).
 - [ ] **Carte** : déposer le PDF dans `public/` et renseigner `menuPdf` (sinon la carte provisoire s’affiche). La « marmite du pêcheur » n’est citée que comme piste à valider.
 - [ ] **Créneaux** de réservation selon les horaires réels (`reservation.timeSlots`).
-- [ ] **Réseaux sociaux** officiels (`socials`).
+- [x] **Réseaux sociaux** : TikTok @mamia.lagoon ajouté (`socials`) — ajouter Instagram/Facebook s'ils existent.
 - [ ] **Logo** officiel (le logotype actuel est typographique : `src/components/ui/Logo.tsx`).
 - [ ] **Mentions légales** : compléter les champs entre crochets.
 - [ ] Passer `previewMode: false` pour retirer le bandeau de prévisualisation.
