@@ -8,7 +8,7 @@ export function LegalPage({ title, children }: { title: string; children: React.
     <div className="min-h-dvh bg-ivory">
       <header className="bg-lagoon-deep py-5">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 sm:px-8">
-          <Link href="/" aria-label="Retour à l’accueil"><Logo /></Link>
+          <Link href="/" aria-label="Retour à l’accueil"><Logo size={44} /></Link>
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-ivory/80 hover:text-ivory">
             <ArrowLeft className="size-4" aria-hidden="true" /> Accueil
           </Link>

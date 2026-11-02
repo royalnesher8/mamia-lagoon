@@ -41,7 +41,7 @@ npm start          # sert le build
 - [ ] **Carte** : déposer le PDF dans `public/` et renseigner `menuPdf` (sinon la carte provisoire s’affiche). La « marmite du pêcheur » n’est citée que comme piste à valider.
 - [ ] **Créneaux** de réservation selon les horaires réels (`reservation.timeSlots`).
 - [x] **Réseaux sociaux** : TikTok @mamia.lagoon ajouté (`socials`) — ajouter Instagram/Facebook s'ils existent.
-- [ ] **Logo** officiel (le logotype actuel est typographique : `src/components/ui/Logo.tsx`).
+- [x] **Logo** officiel intégré (`src/assets/logo-mamia-lagoon.webp`) : header, footer, favicon (`src/app/icon.png`, `favicon.ico`, `apple-icon.png`) et image de partage. Une version vectorielle (SVG) serait idéale pour la netteté.
 - [ ] **Mentions légales** : compléter les champs entre crochets.
 - [ ] Passer `previewMode: false` pour retirer le bandeau de prévisualisation.
 
