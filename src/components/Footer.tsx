@@ -16,7 +16,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-5 pt-20 pb-10 sm:px-8 lg:px-12 lg:pt-28">
         <div className="grid gap-14 border-b border-ivory/10 pb-16 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo />
+            <Logo size={104} />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-ivory/65">{restaurant.shortDescription}</p>
             <p className="mt-6 font-serif text-xl text-champagne italic">{restaurant.tagline}</p>
           </div>

@@ -53,7 +53,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
         <a href="#accueil" className="relative z-10 rounded-sm" aria-label="Mamia Lagoon — retour à l’accueil" onClick={() => setOpen(false)}>
-          <Logo />
+          <Logo preload size={54} />
         </a>
 
         <nav aria-label="Navigation principale" className="hidden lg:block">
