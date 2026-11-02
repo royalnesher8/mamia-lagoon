@@ -72,7 +72,10 @@ export function Footer() {
                 <ul className="mt-5 flex flex-wrap gap-4 text-sm">
                   {restaurant.socials.map((s) => (
                     <li key={s.href}>
-                      <a href={s.href} target="_blank" rel="noopener" className="text-ivory/75 hover:text-ivory">{s.label}</a>
+                      <a href={s.href} target="_blank" rel="noopener" className="text-ivory/75 hover:text-ivory">
+                        {s.label} <span className="text-ivory/50">{s.handle}</span>
+                        <span className="sr-only"> (nouvel onglet)</span>
+                      </a>
                     </li>
                   ))}
                 </ul>

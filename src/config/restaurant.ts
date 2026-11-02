@@ -69,7 +69,9 @@ export const restaurant = {
   menuPdf: null as string | null,
 
   /** Réseaux sociaux officiels — n’ajouter que des comptes confirmés. */
-  socials: [] as { label: string; href: string }[],
+  socials: [
+    { label: "TikTok", handle: "@mamia.lagoon", href: "https://www.tiktok.com/@mamia.lagoon" },
+  ] as { label: string; handle: string; href: string }[],
 
   reservation: {
     /** Créneaux proposés dans le formulaire (à ajuster selon les horaires réels). */
