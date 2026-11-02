@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-lagoon: #143d36;
+  --color-lagoon-deep: #0d2a25;
+  --color-lagoon-soft: #1e5249;
+  --color-champagne: #c5a46d;
+  --color-champagne-light: #dcc496;
+  /* Or assombri : réservé aux petits textes sur fond clair (contraste AA). */
+  --color-champagne-ink: #7a5d2c;
+  --color-ivory: #f5f0e6;
+  --color-ivory-deep: #ece4d4;
+  --color-charcoal: #252621;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-serif: var(--font-cormorant), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-manrope), "Inter", system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-slow-zoom: slow-zoom 22s ease-out both;
+  @keyframes slow-zoom {
+    from { transform: scale(1.12); }
+    to { transform: scale(1); }
+  }
+  --animate-scroll-cue: scroll-cue 2.4s ease-in-out infinite;
+  @keyframes scroll-cue {
+    0% { transform: translateY(-100%); }
+    60%, 100% { transform: translateY(100%); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+  /* Les ancres ne passent pas sous le header fixe. */
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+  ::selection {
+    background: var(--color-champagne);
+    color: var(--color-lagoon-deep);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-champagne);
+    outline-offset: 3px;
+  }
+  dialog::backdrop {
+    background: rgb(13 42 37 / 0.88);
+    backdrop-filter: blur(4px);
+  }
+}
+
+@utility eyebrow {
+  @apply inline-flex items-center gap-3 font-sans text-[0.7rem] font-semibold tracking-[0.32em] uppercase;
+}
+@utility title-display {
+  @apply font-serif font-medium leading-[1.02] tracking-[-0.01em];
+}
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 font-sans text-sm font-semibold tracking-wide transition-all duration-300 ease-luxe;
+}
+@utility btn-gold {
+  @apply btn bg-champagne text-lagoon-deep hover:bg-champagne-light hover:shadow-[0_10px_30px_-12px_rgb(197_164_109/0.8)];
+}
+@utility btn-ghost-light {
+  @apply btn border border-ivory/50 text-ivory hover:border-ivory hover:bg-ivory/10;
+}
+@utility btn-lagoon {
+  @apply btn bg-lagoon text-ivory hover:bg-lagoon-soft;
+}
+@utility btn-outline-dark {
+  @apply btn border border-lagoon/30 text-lagoon hover:border-lagoon hover:bg-lagoon hover:text-ivory;
+}
+@utility field {
+  @apply w-full rounded-none border-0 border-b border-ivory/30 bg-transparent px-0 py-3 text-base text-ivory placeholder:text-ivory/45 transition-colors focus:border-champagne focus:outline-none focus-visible:outline-none;
+}
+@layer components {
+  .eyebrow::before {
+    content: "";
+    display: block; height: 1px; width: 2rem; background: currentColor; opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

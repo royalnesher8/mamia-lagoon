@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mamia Lagoon — site vitrine
 
-## Getting Started
+Landing page du restaurant **Mamia Lagoon** (Grand-Bassam, Côte d’Ivoire) : « L’élégance au fil de l’eau ».
 
-First, run the development server:
+Next.js (App Router) · TypeScript · Tailwind CSS v4 · Motion · Lucide React.
+
+## Lancer le site en local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Contrôles :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx tsc --noEmit   # TypeScript
+npm run lint       # ESLint
+npm run build      # build de production
+npm start          # sert le build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Où modifier quoi
 
-## Learn More
+| Élément | Fichier |
+| --- | --- |
+| Nom, téléphone, WhatsApp, adresse, horaires, réseaux, menu PDF, créneaux de réservation | `src/config/restaurant.ts` |
+| Images (hero, sections, galerie) et textes `alt` | `src/config/images.ts` + `src/assets/images/` |
+| Image de partage (Open Graph) | `src/app/opengraph-image.jpg` (1200×630) |
+| Couleurs, polices, boutons | `src/app/globals.css` |
+| Sections de la page | `src/components/*.tsx` |
+| Mentions légales / confidentialité | `src/app/mentions-legales`, `src/app/confidentialite` |
 
-To learn more about Next.js, take a look at the following resources:
+## Avant publication : checklist
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] **Téléphone** : confirmer `+225 07 15 44 15 84` avec le restaurant, puis `contact.phoneVerified: true` (il apparaîtra alors aussi dans les données structurées Google).
+- [ ] **Photos** : les visuels actuels sont des **illustrations de démonstration** générées pour la maquette. Remplacer chaque fichier de `src/assets/images/` par une photo officielle et autorisée (WebP ou JPEG, ~2000 px de large suffit ; Next.js sert automatiquement de l’AVIF/WebP), mettre à jour l’`alt` et passer `demo: false` dans `src/config/images.ts`.
+- [ ] **Horaires** : renseigner `openingHours` (le champ `schema` alimente Google).
+- [ ] **Adresse précise** et coordonnées GPS (`address.street`, `address.geo`).
+- [ ] **Carte** : déposer le PDF dans `public/` et renseigner `menuPdf` (sinon la carte provisoire s’affiche). La « marmite du pêcheur » n’est citée que comme piste à valider.
+- [ ] **Créneaux** de réservation selon les horaires réels (`reservation.timeSlots`).
+- [ ] **Réseaux sociaux** officiels (`socials`).
+- [ ] **Logo** officiel (le logotype actuel est typographique : `src/components/ui/Logo.tsx`).
+- [ ] **Mentions légales** : compléter les champs entre crochets.
+- [ ] Passer `previewMode: false` pour retirer le bandeau de prévisualisation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Réservation
 
-## Deploy on Vercel
+Le formulaire valide les champs (date à venir, horaire non passé, téléphone plausible) puis ouvre WhatsApp avec un message prérempli vers le numéro de `restaurant.ts`. Aucune donnée n’est stockée ; le site indique clairement que la réservation n’est confirmée qu’après réponse du restaurant.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Déployer sur Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Sur [vercel.com/new](https://vercel.com/new), importer le dépôt GitHub `mamia-lagoon` (framework détecté : Next.js, aucun réglage requis).
+2. Dans *Settings → Environment Variables*, ajouter `NEXT_PUBLIC_SITE_URL` = l’URL finale (ex. `https://www.votre-domaine.ci`). Sans elle, l’URL de production Vercel est utilisée pour le sitemap, le canonical et l’Open Graph.
+3. *Settings → Domains* pour brancher le nom de domaine.
+
+Chaque push sur `main` redéploie automatiquement ; chaque pull request obtient une URL de prévisualisation.
