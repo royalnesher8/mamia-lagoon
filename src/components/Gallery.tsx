@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
-import { gallery, galleryCategories, type GalleryCategory } from "@/config/images";
+import { gallery, galleryCategories, images, type GalleryCategory } from "@/config/images";
+import { restaurant } from "@/config/restaurant";
+import { TikTokEmbed } from "./TikTokEmbed";
 import { DemoBadge } from "./ui/DemoBadge";
 import { Modal } from "./ui/Modal";
 import { SectionHeading } from "./ui/SectionHeading";
@@ -20,6 +22,8 @@ const layout = [
   "col-span-1 row-span-1 lg:col-span-2 lg:row-span-2",
   "col-span-2 row-span-1 lg:col-span-1",
 ];
+
+const videos = restaurant.tiktokVideos.filter((v) => v.published);
 
 export function Gallery() {
   const [filter, setFilter] = useState<GalleryCategory | "all">("all");
@@ -108,7 +112,34 @@ export function Gallery() {
             ))}
           </AnimatePresence>
         </motion.ul>
-        <p className="mt-6 text-xs text-charcoal/60 sm:hidden">Visuels de démonstration — à remplacer par les photographies officielles.</p>
+        <p className="mt-6 text-xs text-charcoal/60 sm:hidden">
+          Les visuels marqués « démonstration » seront remplacés par des photographies officielles.
+        </p>
+
+        {videos.length > 0 && (
+          <div className="mt-20 grid items-center gap-10 border-t border-lagoon/15 pt-16 md:grid-cols-2 lg:mt-28 lg:pt-20">
+            <div className="max-w-md">
+              <p className="eyebrow text-champagne-ink">En vidéo</p>
+              <h3 className="title-display mt-5 text-4xl text-lagoon sm:text-5xl">Mamia Lagoon en mouvement</h3>
+              <p className="mt-5 leading-relaxed text-charcoal/75">
+                L’ambiance du lieu, partagée par l’équipe sur notre compte TikTok officiel.
+              </p>
+              {restaurant.socials
+                .filter((s) => s.href.includes("tiktok.com"))
+                .map((s) => (
+                  <a key={s.href} href={s.href} target="_blank" rel="noopener" className="btn-outline-dark mt-8">
+                    Suivre {s.handle} sur TikTok
+                    <span className="sr-only">(nouvel onglet)</span>
+                  </a>
+                ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 md:justify-end">
+              {videos.map((v) => (
+                <TikTokEmbed key={v.id} id={v.id} author={v.author} title={v.title} poster={images.about.src} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <Modal open={current !== null} onClose={() => setIndex(null)} labelledBy="lightbox-caption" className="size-full">

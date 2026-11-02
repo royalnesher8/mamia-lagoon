@@ -26,6 +26,7 @@ npm start          # sert le build
 | --- | --- |
 | Nom, téléphone, WhatsApp, adresse, horaires, réseaux, menu PDF, créneaux de réservation | `src/config/restaurant.ts` |
 | Images (hero, sections, galerie) et textes `alt` | `src/config/images.ts` + `src/assets/images/` |
+| Vidéos TikTok (lecteur chargé au clic) | `tiktokVideos` dans `src/config/restaurant.ts` |
 | Image de partage (Open Graph) | `src/app/opengraph-image.jpg` (1200×630) |
 | Couleurs, polices, boutons | `src/app/globals.css` |
 | Sections de la page | `src/components/*.tsx` |
@@ -34,7 +35,7 @@ npm start          # sert le build
 ## Avant publication : checklist
 
 - [ ] **Téléphone** : `+225 07 15 44 15 84` figure sur l’enseigne « Restaurant » ; le bar est au `+225 05 64 32 38 38`. Confirmer, puis `contact.phoneVerified: true` (il apparaîtra alors aussi dans les données structurées Google).
-- [ ] **Photos** : la photo de l’entrée (section « Notre univers ») est réelle mais en basse résolution (415 px) ; à remplacer par une version HD si possible. Les autres visuels sont des **illustrations de démonstration** générées pour la maquette. Remplacer chaque fichier de `src/assets/images/` par une photo officielle et autorisée (WebP ou JPEG, ~2000 px de large suffit ; Next.js sert automatiquement de l’AVIF/WebP), mettre à jour l’`alt` et passer `demo: false` dans `src/config/images.ts`.
+- [ ] **Photos** : 4 photos réelles sont intégrées (salle, bar-lounge, façade, entrée/enseigne), en basse résolution (≈ 400–500 px) : à remplacer par des versions HD si possible. Les ardoises de prix et l’affiche karaoké ont été coupées au recadrage. Les autres visuels sont des **illustrations de démonstration** générées pour la maquette. Remplacer chaque fichier de `src/assets/images/` par une photo officielle et autorisée (WebP ou JPEG, ~2000 px de large suffit ; Next.js sert automatiquement de l’AVIF/WebP), mettre à jour l’`alt` et passer `demo: false` dans `src/config/images.ts`.
 - [ ] **Horaires** : renseigner `openingHours` (le champ `schema` alimente Google).
 - [ ] **Adresse précise** et coordonnées GPS (`address.street`, `address.geo`).
 - [ ] **Carte** : déposer le PDF dans `public/` et renseigner `menuPdf` (sinon la carte provisoire s’affiche). La « marmite du pêcheur » n’est citée que comme piste à valider.

@@ -69,6 +69,14 @@ export const restaurant = {
   /** Horaires : laisser `null` tant qu’ils ne sont pas validés. */
   openingHours: null as OpeningHours[] | null,
 
+  /**
+   * Vidéos TikTok mises en avant (identifiant numérique de la vidéo).
+   * `published: false` = préparée mais masquée sur le site.
+   */
+  tiktokVideos: [
+    { id: "7489144349318728965", author: "@mamia.lagoon", title: "Mamia Lagoon en vidéo sur TikTok", published: true },
+  ] as { id: string; author: string; title: string; published: boolean }[],
+
   /** Chemin d’un menu PDF officiel placé dans /public (ex. "/menu-mamia-lagoon.pdf"). */
   menuPdf: null as string | null,
 
