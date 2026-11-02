@@ -100,6 +100,7 @@ export function Gallery() {
                     fill
                     placeholder="blur"
                     sizes="(min-width: 1024px) 40vw, 60vw"
+                    style={{ objectPosition: item.position }}
                     className="object-cover transition-transform duration-[1600ms] ease-luxe group-hover:scale-[1.07]"
                   />
                   <span className="absolute inset-0 bg-lagoon-deep/0 transition-colors duration-500 group-hover:bg-lagoon-deep/25" aria-hidden="true" />

@@ -42,9 +42,9 @@ export const restaurant = {
     phoneE164: "+2250715441584",
     /** Numéro WhatsApp au format international, chiffres uniquement. */
     whatsapp: "2250715441584",
-    /** Passer à `true` une fois le numéro confirmé par le restaurant.
+    /** Numéro confirmé par le restaurant le 2026-11-02.
      *  (Le même numéro figure sur l’enseigne « Restaurant » photographiée à l’entrée.) */
-    phoneVerified: false,
+    phoneVerified: true,
     /** Numéro du bar, affiché sur l’enseigne à l’entrée. */
     barPhoneDisplay: "+225 05 64 32 38 38",
     barPhoneE164: "+2250564323838",

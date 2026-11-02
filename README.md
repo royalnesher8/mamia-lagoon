@@ -34,8 +34,8 @@ npm start          # sert le build
 
 ## Avant publication : checklist
 
-- [ ] **Téléphone** : `+225 07 15 44 15 84` figure sur l’enseigne « Restaurant » ; le bar est au `+225 05 64 32 38 38`. Confirmer, puis `contact.phoneVerified: true` (il apparaîtra alors aussi dans les données structurées Google).
-- [ ] **Photos** : 4 photos réelles sont intégrées (salle, bar-lounge, façade, entrée/enseigne), en basse résolution (≈ 400–500 px) : à remplacer par des versions HD si possible. Les ardoises de prix et l’affiche karaoké ont été coupées au recadrage. Les autres visuels sont des **illustrations de démonstration** générées pour la maquette. Remplacer chaque fichier de `src/assets/images/` par une photo officielle et autorisée (WebP ou JPEG, ~2000 px de large suffit ; Next.js sert automatiquement de l’AVIF/WebP), mettre à jour l’`alt` et passer `demo: false` dans `src/config/images.ts`.
+- [x] **Téléphone** : `+225 07 15 44 15 84` confirmé par le restaurant (`phoneVerified: true`, publié dans les données structurées) ; bar : `+225 05 64 32 38 38`.
+- [ ] **Photos** : 7 photos réelles sont intégrées (salle, bar-lounge, façade, entrée/enseigne, cocktail, chaussons, brochettes) ; celles du lieu sont en basse résolution (≈ 400–500 px) : versions HD bienvenues. Les ardoises de prix, l’affiche karaoké, le logo et le nom incrustés sur le cocktail ont été coupés au recadrage. Les autres visuels sont des **illustrations de démonstration** générées pour la maquette. Remplacer chaque fichier de `src/assets/images/` par une photo officielle et autorisée (WebP ou JPEG, ~2000 px de large suffit ; Next.js sert automatiquement de l’AVIF/WebP), mettre à jour l’`alt` et passer `demo: false` dans `src/config/images.ts`.
 - [ ] **Horaires** : renseigner `openingHours` (le champ `schema` alimente Google).
 - [ ] **Adresse précise** et coordonnées GPS (`address.street`, `address.geo`).
 - [ ] **Carte** : déposer le PDF dans `public/` et renseigner `menuPdf` (sinon la carte provisoire s’affiche). La « marmite du pêcheur » n’est citée que comme piste à valider.

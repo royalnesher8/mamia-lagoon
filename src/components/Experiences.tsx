@@ -52,6 +52,7 @@ export function Experiences() {
                     fill
                     placeholder="blur"
                     sizes="(min-width: 768px) 45vw, 100vw"
+                    style={{ objectPosition: m.image.position }}
                     className="object-cover transition-transform duration-[2000ms] ease-luxe hover:scale-105"
                   />
                   <DemoBadge show={m.image.demo} />
