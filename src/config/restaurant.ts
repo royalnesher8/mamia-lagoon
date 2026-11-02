@@ -42,8 +42,12 @@ export const restaurant = {
     phoneE164: "+2250715441584",
     /** Numéro WhatsApp au format international, chiffres uniquement. */
     whatsapp: "2250715441584",
-    /** Passer à `true` une fois le numéro confirmé par le restaurant. */
-    phoneVerified: false,
+    /** Numéro confirmé par le restaurant le 2026-11-02.
+     *  (Le même numéro figure sur l’enseigne « Restaurant » photographiée à l’entrée.) */
+    phoneVerified: true,
+    /** Numéro du bar, affiché sur l’enseigne à l’entrée. */
+    barPhoneDisplay: "+225 05 64 32 38 38",
+    barPhoneE164: "+2250564323838",
     email: null as string | null,
   },
 
@@ -64,6 +68,14 @@ export const restaurant = {
 
   /** Horaires : laisser `null` tant qu’ils ne sont pas validés. */
   openingHours: null as OpeningHours[] | null,
+
+  /**
+   * Vidéos TikTok mises en avant (identifiant numérique de la vidéo).
+   * `published: false` = préparée mais masquée sur le site.
+   */
+  tiktokVideos: [
+    { id: "7489144349318728965", author: "@mamia.lagoon", title: "Mamia Lagoon en vidéo sur TikTok", published: true },
+  ] as { id: string; author: string; title: string; published: boolean }[],
 
   /** Chemin d’un menu PDF officiel placé dans /public (ex. "/menu-mamia-lagoon.pdf"). */
   menuPdf: null as string | null,
@@ -99,6 +111,7 @@ const q = encodeURIComponent(restaurant.maps.query);
 
 export const links = {
   tel: `tel:${restaurant.contact.phoneE164}`,
+  telBar: `tel:${restaurant.contact.barPhoneE164}`,
   whatsapp: (text?: string) =>
     `https://wa.me/${restaurant.contact.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ""}`,
   mapsPlace: `https://www.google.com/maps/search/?api=1&query=${q}&query_place_id=${restaurant.maps.placeId}`,

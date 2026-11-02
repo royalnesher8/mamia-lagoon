@@ -38,7 +38,9 @@ export function Location() {
               <dt><Phone className="mt-1 size-5 text-champagne-ink" aria-hidden="true" /><span className="sr-only">Téléphone</span></dt>
               <dd>
                 <a href={links.tel} className="font-serif text-2xl text-lagoon underline-offset-4 hover:underline">{contact.phoneDisplay}</a>
-                <p className="mt-1 text-sm text-charcoal/65">Appel ou WhatsApp</p>
+                <p className="mt-1 text-sm text-charcoal/65">Restaurant · appel ou WhatsApp</p>
+                <a href={links.telBar} className="mt-3 block font-serif text-2xl text-lagoon underline-offset-4 hover:underline">{contact.barPhoneDisplay}</a>
+                <p className="mt-1 text-sm text-charcoal/65">Bar</p>
               </dd>
             </div>
             <div className="flex gap-5">
