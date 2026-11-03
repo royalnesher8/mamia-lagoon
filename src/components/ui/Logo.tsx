@@ -31,7 +31,7 @@ export function Logo({ tone = "light", size = 52, wordmark = true, className = "
       {wordmark && (
         <span className="flex flex-col leading-none">
           <span className="font-serif text-[1.45rem] font-semibold tracking-[0.18em]">MAMIA</span>
-          <span className="mt-1 font-sans text-[0.58rem] font-semibold tracking-[0.55em] text-champagne">LAGOON</span>
+          <span className="mt-1 font-sans text-[0.58rem] font-semibold tracking-[0.55em] text-sun">LAGOON</span>
         </span>
       )}
     </span>

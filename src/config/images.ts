@@ -74,7 +74,11 @@ const photos = {
 };
 
 export const images = {
-  hero: demo(heroLagune, "la lagune au coucher du soleil, encadrée de palmiers"),
+  // Visuel d'ambiance fourni par le client (ce n'est pas la lagune de Grand-Bassam) : reste signalé comme illustration.
+  hero: {
+    ...demo(heroLagune, "eau turquoise et îlot de palmiers sous un ciel bleu"),
+    position: "50% 44%",
+  },
   about: photos.salle,
   aboutDetail: photos.enseigne,
 

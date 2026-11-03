@@ -17,14 +17,14 @@ export function Location() {
     <section id="contact" aria-labelledby="contact-title" className="bg-ivory py-24 sm:py-32 lg:py-40">
       <div className="mx-auto grid max-w-[1440px] gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-10 lg:px-12">
         <Reveal className="lg:col-span-5">
-          <p className="eyebrow text-champagne-ink">Localisation</p>
+          <p className="eyebrow text-sun-ink">Localisation</p>
           <h2 id="contact-title" className="title-display mt-6 text-[2.6rem] text-balance text-lagoon sm:text-5xl lg:text-[4rem]">
             Retrouvez-nous à Grand-Bassam
           </h2>
 
           <dl className="mt-12 space-y-8">
             <div className="flex gap-5">
-              <dt><MapPin className="mt-1 size-5 text-champagne-ink" aria-hidden="true" /><span className="sr-only">Adresse</span></dt>
+              <dt><MapPin className="mt-1 size-5 text-sun-ink" aria-hidden="true" /><span className="sr-only">Adresse</span></dt>
               <dd>
                 <p className="font-serif text-2xl text-lagoon">{restaurant.name}</p>
                 <p className="mt-1 text-charcoal/75">
@@ -35,7 +35,7 @@ export function Location() {
               </dd>
             </div>
             <div className="flex gap-5">
-              <dt><Phone className="mt-1 size-5 text-champagne-ink" aria-hidden="true" /><span className="sr-only">Téléphone</span></dt>
+              <dt><Phone className="mt-1 size-5 text-sun-ink" aria-hidden="true" /><span className="sr-only">Téléphone</span></dt>
               <dd>
                 <a href={links.tel} className="font-serif text-2xl text-lagoon underline-offset-4 hover:underline">{contact.phoneDisplay}</a>
                 <p className="mt-1 text-sm text-charcoal/65">Restaurant · appel ou WhatsApp</p>
@@ -44,7 +44,7 @@ export function Location() {
               </dd>
             </div>
             <div className="flex gap-5">
-              <dt><Clock className="mt-1 size-5 text-champagne-ink" aria-hidden="true" /><span className="sr-only">Horaires</span></dt>
+              <dt><Clock className="mt-1 size-5 text-sun-ink" aria-hidden="true" /><span className="sr-only">Horaires</span></dt>
               <dd>
                 {openingHours ? (
                   <ul className="space-y-1">
@@ -93,8 +93,8 @@ export function Location() {
                 <div className="absolute inset-0 bg-lagoon-deep/55" aria-hidden="true" />
                 <DemoBadge show={images.location.demo} className="top-4 right-4" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center text-ivory">
-                  <span className="inline-flex size-16 items-center justify-center rounded-full border border-champagne/60">
-                    <MapPin className="size-7 text-champagne" strokeWidth={1.25} aria-hidden="true" />
+                  <span className="inline-flex size-16 items-center justify-center rounded-full border border-sun/60">
+                    <MapPin className="size-7 text-sun" strokeWidth={1.25} aria-hidden="true" />
                   </span>
                   <p className="font-serif text-3xl">Mamia Lagoon · Grand-Bassam</p>
                   <div className="flex flex-col gap-3 sm:flex-row">

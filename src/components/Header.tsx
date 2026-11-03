@@ -66,7 +66,7 @@ export function Header() {
                   className="group relative py-2 text-[0.8rem] font-medium tracking-[0.12em] text-ivory/85 uppercase transition-colors hover:text-ivory aria-[current]:text-ivory"
                 >
                   {item.label}
-                  <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-champagne transition-transform duration-500 ease-luxe group-hover:scale-x-100 group-aria-[current]:scale-x-100" />
+                  <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-sun transition-transform duration-500 ease-luxe group-hover:scale-x-100 group-aria-[current]:scale-x-100" />
                 </a>
               </li>
             ))}
@@ -114,7 +114,7 @@ export function Header() {
                       onClick={() => setOpen(false)}
                       className="flex items-baseline gap-4 border-b border-ivory/10 py-4 font-serif text-[2.1rem] text-ivory"
                     >
-                      <span className="font-sans text-xs tracking-widest text-champagne">0{i + 1}</span>
+                      <span className="font-sans text-xs tracking-widest text-sun">0{i + 1}</span>
                       {item.label}
                     </a>
                   </motion.li>

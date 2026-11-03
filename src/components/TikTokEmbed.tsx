@@ -30,7 +30,7 @@ export function TikTokEmbed({ id, author, title, poster }: Props) {
             <Image src={poster} alt="" fill placeholder="blur" sizes="340px" className="object-cover transition-transform duration-[1600ms] ease-luxe group-hover:scale-105" />
             <span className="absolute inset-0 bg-gradient-to-t from-lagoon-deep/85 via-lagoon-deep/30 to-lagoon-deep/40" aria-hidden="true" />
             <span className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-ivory">
-              <span className="inline-flex size-16 items-center justify-center rounded-full bg-champagne text-lagoon-deep transition-transform duration-300 group-hover:scale-110">
+              <span className="inline-flex size-16 items-center justify-center rounded-full bg-sun text-lagoon-deep transition-transform duration-300 group-hover:scale-110">
                 <Play className="ml-1 size-6" fill="currentColor" aria-hidden="true" />
               </span>
               <span className="font-sans text-xs font-semibold tracking-[0.2em] uppercase">Lire la vidéo</span>

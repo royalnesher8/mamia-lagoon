@@ -50,13 +50,13 @@ export function About() {
             />
             <DemoBadge show={images.aboutDetail.demo} className="bottom-2 left-2 hidden sm:block" />
           </ImageReveal>
-          <span aria-hidden="true" className="absolute -top-10 right-[4%] hidden font-serif text-[9rem] leading-none text-champagne/25 select-none sm:block">01</span>
+          <span aria-hidden="true" className="absolute -top-10 right-[4%] hidden font-serif text-[9rem] leading-none text-sun/25 select-none sm:block">01</span>
         </div>
 
         {/* Texte */}
         <div className="pt-8 lg:col-span-5 lg:col-start-8 lg:pt-0">
           <Reveal>
-            <p className="eyebrow text-champagne-ink">Bienvenue chez Mamia Lagoon</p>
+            <p className="eyebrow text-sun-ink">Bienvenue chez Mamia Lagoon</p>
             <h2 id="univers-title" className="title-display mt-6 text-[2.6rem] text-balance text-lagoon sm:text-5xl lg:text-[3.8rem]">
               Un lieu d’exception, une expérience à savourer
             </h2>
@@ -78,7 +78,7 @@ export function About() {
           <ul className="mt-12 grid gap-8 border-t border-lagoon/15 pt-10 sm:grid-cols-3 sm:gap-6">
             {values.map((v) => (
                 <li key={v.title}>
-                  <v.icon className="size-7 text-champagne-ink" strokeWidth={1.25} aria-hidden="true" />
+                  <v.icon className="size-7 text-sun-ink" strokeWidth={1.25} aria-hidden="true" />
                   <h3 className="mt-4 font-serif text-2xl text-lagoon">{v.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-charcoal/70">{v.text}</p>
                 </li>

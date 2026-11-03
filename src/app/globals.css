@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lagoon: #143d36;
-  --color-lagoon-deep: #0d2a25;
-  --color-lagoon-soft: #1e5249;
-  --color-champagne: #c5a46d;
-  --color-champagne-light: #dcc496;
-  /* Or assombri : réservé aux petits textes sur fond clair (contraste AA). */
-  --color-champagne-ink: #7a5d2c;
-  --color-ivory: #f5f0e6;
-  --color-ivory-deep: #ece4d4;
-  --color-charcoal: #252621;
+  /* Palette tirée du logo : bleu lagune, soleil orange-jaune, brun du palmier. */
+  --color-lagoon: #0a4578;
+  --color-lagoon-deep: #072f55;
+  --color-lagoon-soft: #0d64a0;
+  --color-sun: #f2a33a;
+  --color-sun-light: #f9cf72;
+  /* Orange assombri : réservé aux petits textes sur fond clair (contraste AA). */
+  --color-sun-ink: #94520a;
+  --color-ivory: #f7f2e8;
+  --color-ivory-deep: #efe6d4;
+  /* Brun « tronc de palmier » très sombre, pour le texte et le pied de page. */
+  --color-charcoal: #2b1d15;
 
   --font-serif: var(--font-cormorant), "Playfair Display", Georgia, serif;
   --font-sans: var(--font-manrope), "Inter", system-ui, sans-serif;
@@ -45,15 +47,15 @@
     scroll-margin-top: 4.5rem;
   }
   ::selection {
-    background: var(--color-champagne);
+    background: var(--color-sun);
     color: var(--color-lagoon-deep);
   }
   :focus-visible {
-    outline: 2px solid var(--color-champagne);
+    outline: 2px solid var(--color-sun);
     outline-offset: 3px;
   }
   dialog::backdrop {
-    background: rgb(13 42 37 / 0.88);
+    background: rgb(7 47 85 / 0.88);
     backdrop-filter: blur(4px);
   }
 }
@@ -68,7 +70,7 @@
   @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 font-sans text-sm font-semibold tracking-wide transition-all duration-300 ease-luxe;
 }
 @utility btn-gold {
-  @apply btn bg-champagne text-lagoon-deep hover:bg-champagne-light hover:shadow-[0_10px_30px_-12px_rgb(197_164_109/0.8)];
+  @apply btn bg-sun text-lagoon-deep hover:bg-sun-light hover:shadow-[0_10px_30px_-12px_rgb(242_163_58/0.7)];
 }
 @utility btn-ghost-light {
   @apply btn border border-ivory/50 text-ivory hover:border-ivory hover:bg-ivory/10;
@@ -80,7 +82,7 @@
   @apply btn border border-lagoon/30 text-lagoon hover:border-lagoon hover:bg-lagoon hover:text-ivory;
 }
 @utility field {
-  @apply w-full rounded-none border-0 border-b border-ivory/30 bg-transparent px-0 py-3 text-base text-ivory placeholder:text-ivory/45 transition-colors focus:border-champagne focus:outline-none focus-visible:outline-none;
+  @apply w-full rounded-none border-0 border-b border-ivory/30 bg-transparent px-0 py-3 text-base text-ivory placeholder:text-ivory/45 transition-colors focus:border-sun focus:outline-none focus-visible:outline-none;
 }
 @layer components {
   .eyebrow::before {

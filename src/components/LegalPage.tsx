@@ -16,7 +16,7 @@ export function LegalPage({ title, children }: { title: string; children: React.
       </header>
       <main className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
         <h1 className="title-display text-5xl text-lagoon sm:text-6xl">{title}</h1>
-        <p className="mt-6 border-l-2 border-champagne bg-champagne/10 p-4 text-sm text-charcoal/80">
+        <p className="mt-6 border-l-2 border-sun bg-sun/10 p-4 text-sm text-charcoal/80">
           Contenu provisoire : les éléments entre crochets doivent être complétés et validés par l’établissement avant
           publication.
         </p>
