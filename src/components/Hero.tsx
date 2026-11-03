@@ -19,7 +19,8 @@ export function Hero() {
           preload
           placeholder="blur"
           sizes="100vw"
-          className="object-cover object-[50%_60%]"
+          className="object-cover"
+          style={{ objectPosition: img.position ?? "50% 60%" }}
         />
       </div>
       {/* Dégradés : lisibilité du texte et du header transparent */}
